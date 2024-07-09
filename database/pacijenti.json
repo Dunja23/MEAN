@@ -1,0 +1,39 @@
+[{
+  "_id": {
+    "$oid": "65046dc8addb6530bc25d5b0"
+  },
+  "ime": "Petar",
+  "prezime": "Petrovic",
+  "kor_ime": "pera",
+  "lozinka": "Pera124!",
+  "mejl": "pera@gmail.com",
+  "adresa": "Patrijarha Joanikija 10",
+  "kontakt": "0621425366",
+  "slika": "1694962203531.png"
+},
+{
+  "_id": {
+    "$oid": "65046dc8addb6530bc25d5b1"
+  },
+  "ime": "Zika",
+  "prezime": "Zikic",
+  "kor_ime": "zika",
+  "lozinka": "Zika123?",
+  "mejl": "zika@gmail.com",
+  "adresa": "Pozeska 95",
+  "kontakt": "0621121366",
+  "slika": "1694985874711.png"
+},
+{
+  "_id": {
+    "$oid": "650a4945e211a484f2f3e391"
+  },
+  "kor_ime": "mika",
+  "ime": "Mika",
+  "prezime": "Mikic",
+  "lozinka": "Mika123!",
+  "kontakt": "0652145667",
+  "adresa": "Bulevar kralja Aleksandra 94",
+  "mejl": "mika@gmail.com",
+  "slika": ""
+}]

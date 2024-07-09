@@ -1,0 +1,64 @@
+[{
+  "_id": {
+    "$oid": "6508c99f32065ae1a8fef998"
+  },
+  "pacijent": "zika",
+  "specijalizacija": "infektologija",
+  "datum": "2023-06-15",
+  "vreme": "14:00",
+  "razlog": "prehlada",
+  "dijagnoza": "virus",
+  "terapija": "antibiotici",
+  "prep_datum": "2023-06-25",
+  "idI": "1",
+  "idZ": "6",
+  "lekar": "danica"
+},
+{
+  "_id": {
+    "$oid": "6508caef32065ae1a8fef99c"
+  },
+  "pacijent": "pera",
+  "specijalizacija": "infektologija",
+  "datum": "2023-06-15",
+  "vreme": "12:00",
+  "razlog": "prehlada",
+  "dijagnoza": "virus",
+  "terapija": "antibiotici",
+  "prep_datum": "2023-06-25",
+  "idI": "2",
+  "idZ": "1",
+  "lekar": "danica"
+},
+{
+  "_id": {
+    "$oid": "65098659bbf8ccfdba71565a"
+  },
+  "pacijent": "pera",
+  "specijalizacija": "stomatologija",
+  "datum": "2023-07-15",
+  "vreme": "12:00",
+  "razlog": "intervencija",
+  "dijagnoza": "-",
+  "terapija": "antibiotici",
+  "prep_datum": "2023-07-25",
+  "idI": "3",
+  "idZ": "3",
+  "lekar": "gora"
+},
+{
+  "_id": {
+    "$oid": "6509f8c6d218df07ea1987cf"
+  },
+  "pacijent": "pera",
+  "lekar": "danica",
+  "specijalizacija": "infektologija",
+  "datum": "2023-9-19",
+  "vreme": "21:15",
+  "razlog": "sumnja na imunolosku bolest",
+  "dijagnoza": "-",
+  "terapija": "-",
+  "prep_datum": "2023-10-10",
+  "idI": 4,
+  "idZ": 7
+}]

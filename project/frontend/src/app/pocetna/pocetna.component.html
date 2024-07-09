@@ -1,0 +1,75 @@
+<body class="bg-opacity-50 bg-info">
+    <div class="container-fluid">
+        <head class="row bg-info text-center">
+            <h2>Početna stranica</h2>
+        </head>
+        <div class="row">
+            <div class="col-md-12 text-end">
+                <button class="btn btn-outline-dark" (click)="signin()">Uloguj se</button>
+            </div>
+        </div>
+        <hr /><br />
+        <h3 class="text-center">O nama</h3>
+        <p class="font-wight-bold text-center">
+            Lekarska ordinacija osnovana je kao ustanova koja se primarno bavi opštom medicinom i
+            unapredjenjem zdravlja. U prijatnoj atmosveri naše ordinacije možete obaviti pregled lekara opšte prakse.
+            Takodje uz opšti pregled lekara, možemo obezbediti konsultativne preglede specijalista svih oblasti
+            medicine. </p><br />
+        <div class="container d-flex justify-content-center align-items-center">
+            <div class="table-responsive col-md-12">
+                <table class="table table-sm ">
+                    <tbody>
+                        <tr>
+                            <td><img src="http://localhost:4000/galerija/slika1.jpg" width="350" height="250"></td>
+                            <td><img src="http://localhost:4000/galerija/slika2.jpg" width="350" height="250"></td>
+                            <td><img src="http://localhost:4000/galerija/slika3.jpg" width="350" height="250"></td>
+                        </tr>
+                        <tr>
+                            <td><img src="http://localhost:4000/galerija/slika4.jpg" width="350" height="250"></td>
+                            <td><img src="http://localhost:4000/galerija/slika5.jpg" width="350" height="250"></td>
+                            <td><img src="http://localhost:4000/galerija/slika6.jpg" width="350" height="250"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div><br />
+        <hr />
+        <h3>Pretraga lekara</h3><br />
+        <label for="ime" class="form-label">Ime: </label>
+        <input class="form-control-lg" type="text" [(ngModel)]="regexI" id="ime"><br />
+        <label for="prezime" class="form-label">Prezime: </label>
+        <input class="form-control-lg" type="text" [(ngModel)]="regexP" id="prezime"><br />
+        <label for="specijalizacija" class="form-label">Specijalizacija: </label>
+        <input class="form-control-lg" type="text" [(ngModel)]="regexS" id="specijalizacija"><br />
+        <button class="btn btn-light" (click)="pretrazi()">Pretraži</button>
+        <br /><br />
+        <div class="col-md-7">
+            <table class="table table-info table-bordered text-center">
+                <thead>
+                    <tr>
+                        <th>Profilna</th>
+                        <th><label (click)="sortiraj('Ime')">Ime</label></th>
+                        <th><label (click)="sortiraj('Prezime')">Prezime</label></th>
+                        <th><label (click)="sortiraj('Specijalizacija')">Specijalizacija</label></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let l of lekari">
+                        <td>
+                            <img *ngIf="l.slika !='' " src="http://localhost:4000/uploads/{{l.slika}}" width="100"
+                                height="100">
+                            <img *ngIf="!l.slika" src="http://localhost:4000/uploads/profile_icon.jpg" width="100"
+                                height="100">
+                        </td>
+                        <td>{{l.ime}}</td>
+                        <td>{{l.prezime}}</td>
+                        <td>{{l.specijalizacija}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div><br />
+    </div>
+    <footer class="bg-info">
+        <h5 class="text-center">2023@ Lekarska ordinacija</h5>
+    </footer><br />
+</body>

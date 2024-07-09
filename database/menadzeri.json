@@ -1,0 +1,20 @@
+[{
+  "_id": {
+    "$oid": "650a05c5df01b74bd66d890b"
+  },
+  "ime": "Viktorija",
+  "prezime": "Viktorovic",
+  "kor_ime": "viki",
+  "lozinka": "Viki123!",
+  "mejl": "viki@gmail.com"
+},
+{
+  "_id": {
+    "$oid": "650a05c5df01b74bd66d890c"
+  },
+  "ime": "Marko",
+  "prezime": "Markovic",
+  "kor_ime": "mare",
+  "lozinka": "Mare123?",
+  "mejl": "mare@gmail.com"
+}]

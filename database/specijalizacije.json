@@ -1,0 +1,24 @@
+[{
+  "_id": {
+    "$oid": "650a4d6bdf01b74bd66d893a"
+  },
+  "specijalizacija": "neurologija"
+},
+{
+  "_id": {
+    "$oid": "650a4d6bdf01b74bd66d893b"
+  },
+  "specijalizacija": "infektologija"
+},
+{
+  "_id": {
+    "$oid": "650a4d70df01b74bd66d893c"
+  },
+  "specijalizacija": "stomatologija"
+},
+{
+  "_id": {
+    "$oid": "650a4d91df01b74bd66d8940"
+  },
+  "specijalizacija": "pedijatrija"
+}]

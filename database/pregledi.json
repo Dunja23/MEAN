@@ -1,0 +1,60 @@
+[{
+  "_id": {
+    "$oid": "6507803a95cc756864420537"
+  },
+  "lekar": "danica",
+  "naziv": "pregled specijaliste infektologa",
+  "trajanje": 30,
+  "cena": 7500,
+  "odobren": true
+},
+{
+  "_id": {
+    "$oid": "6507803a95cc756864420538"
+  },
+  "lekar": "ana",
+  "naziv": "elektroencelografija",
+  "trajanje": 60,
+  "cena": 15000,
+  "odobren": true
+},
+{
+  "_id": {
+    "$oid": "6507804895cc756864420539"
+  },
+  "lekar": "danica",
+  "naziv": "biopsija jetre",
+  "trajanje": 90,
+  "cena": 50000,
+  "odobren": true
+},
+{
+  "_id": {
+    "$oid": "650780ee95cc75686442053a"
+  },
+  "lekar": "mika",
+  "naziv": "OAE",
+  "trajanje": 40,
+  "cena": 3900,
+  "odobren": true
+},
+{
+  "_id": {
+    "$oid": "6507812095cc75686442053b"
+  },
+  "lekar": "gora",
+  "naziv": "vadjenje umnjaka",
+  "trajanje": 60,
+  "cena": 10000,
+  "odobren": true
+},
+{
+  "_id": {
+    "$oid": "6509971b23dfc083ceb10d0a"
+  },
+  "lekar": "danica",
+  "naziv": "lumbalna punkcija",
+  "trajanje": 100,
+  "cena": 15000,
+  "odobren": true
+}]

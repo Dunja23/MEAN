@@ -1,0 +1,64 @@
+[{
+  "_id": {
+    "$oid": "6504a886addb6530bc25d5c3"
+  },
+  "ime": "Danijela",
+  "prezime": "Arsic",
+  "kor_ime": "danica",
+  "lozinka": "Danica124!",
+  "mejl": "danica@gmail.com",
+  "adresa": "Patrijarha Joanikija 8",
+  "kontakt": "0633325366",
+  "slika": "1695124351383.png",
+  "licenca": 351858504,
+  "specijalizacija": "infektologija",
+  "ogranak": "Beograd"
+},
+{
+  "_id": {
+    "$oid": "6504a886addb6530bc25d5c4"
+  },
+  "ime": "Mirko",
+  "prezime": "Anic",
+  "kor_ime": "mika",
+  "lozinka": "Mika123?",
+  "mejl": "mika@gmail.com",
+  "adresa": "Pozeska 100",
+  "kontakt": "0671121366",
+  "slika": "",
+  "licenca": 651866704,
+  "specijalizacija": "pedijatrija",
+  "ogranak": "Nis"
+},
+{
+  "_id": {
+    "$oid": "650a17a7df01b74bd66d890e"
+  },
+  "ime": "Ana",
+  "prezime": "Peric",
+  "kor_ime": "ana",
+  "lozinka": "Anica123!",
+  "mejl": "ana@gmail.com",
+  "adresa": "Nemanjina 70",
+  "kontakt": "0633333366",
+  "slika": "",
+  "licenca": "856858505",
+  "specijalizacija": "neurologija",
+  "ogranak": "Novi Sad"
+},
+{
+  "_id": {
+    "$oid": "650a17eadf01b74bd66d890f"
+  },
+  "ime": "Goran",
+  "prezime": "Goric",
+  "kor_ime": "gora",
+  "lozinka": "Gora123!",
+  "mejl": "gora@gmail.com",
+  "adresa": "Oplenacka 50",
+  "kontakt": "0633333366",
+  "slika": "",
+  "licenca": 856858504,
+  "specijalizacija": "stomatologija",
+  "ogranak": "Beograd"
+}]

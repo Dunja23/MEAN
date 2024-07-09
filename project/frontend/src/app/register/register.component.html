@@ -1,0 +1,41 @@
+<body class="bg-opacity-50 bg-info text-center">
+  <div class="container-fluid">
+    <head class="row bg-info text-center">
+      <h2>Registracija</h2>
+    </head>
+    <div class="row">
+      <div class="col-md-12 text-end">
+          <button class="btn btn-outline-dark" (click)="nazad()">Nazad na početnu</button>
+      </div>
+    </div><hr/><br/>
+    <label class="text-secondary">Ovde postavite profilnu sliku.</label><br />
+    <label class="text-secondary" *ngIf="!selected">U slučaju da ne postavite profilnu biće dodata podrazumevana
+      slika.</label><br />
+
+    <input type="file" name="selectedImage" (input)="selectImage($event)">
+    <br />
+    <img *ngIf="selected" [src]="selected"><br />
+
+    <label for="firstname" class="form-label">Ime</label><br />
+    <input type="text" id="firstname" [(ngModel)]="firstname" class="form-control-lg"><br />
+    <label for="lastname" class="form-label">Prezime</label><br />
+    <input type="text" id="lastname" [(ngModel)]="lastname" class="form-control-lg"><br />
+    <label for="username" class="form-label">Korisničko ime</label><br />
+    <input type="text" id="username" [(ngModel)]="username" class="form-control-lg"><br />
+    <label for="email" class="form-label">E-mail</label><br />
+    <input type="email" id="email" [(ngModel)]="email" class="form-control-lg"><br />
+    <label for="adress" class="form-label">Adresa</label><br />
+    <input type="text" id="adress" [(ngModel)]="adress" class="form-control-lg"><br />
+    <label for="kontakt" class="form-label">Kontakt</label><br />
+    <input type="text" id="kontakt" [(ngModel)]="kontakt" class="form-control-lg"><br />
+    <label for="password" class="form-label">Lozinka</label><br />
+    <input type="password" id="password" [(ngModel)]="password" class="form-control-lg"><br />
+    <label for="passwordagain" class="form-label">Ponovite lozinku</label><br />
+    <input type="password" id="passwordagain" [(ngModel)]="passwordagain" class="form-control-lg"><br /><br />
+    <button class="btn btn-light" (click)="register()">Registruj se</button>
+    <pre class="text-danger">{{error}}</pre> <br />
+  </div>
+  <footer class="bg-info">
+    <h5 class="text-center">2023@ Lekarska ordinacija</h5>
+  </footer><br />
+</body>

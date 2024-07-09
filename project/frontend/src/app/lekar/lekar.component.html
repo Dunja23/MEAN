@@ -1,0 +1,144 @@
+<body class="bg-opacity-50 bg-info">
+    <div class="container-fluid">
+        <head class="row bg-info text-center">
+            <h2>Lekar</h2>
+        </head>
+        <div class="row text-decoration-underline">
+            <div class="col-md-4 text-center">
+                <h5 (click)="profilf()">Profil</h5>
+            </div>
+            <div class="col-md-4 text-center">
+                <h5 (click)="pregledf()">Pregledi</h5>
+            </div>
+            <div class="col-md-4 text-end">
+                <button class="btn btn-outline-dark" (click)="logout()">Izloguj se</button>
+            </div>
+        </div>
+        <hr /><br />
+        <div *ngIf="profil">
+            <label for="file-upload">
+                <img *ngIf="lekar.slika !='' " src="http://localhost:4000/uploads/{{lekar.slika}}" width="200"
+                    height="200">
+                <img *ngIf="!lekar.slika" src="http://localhost:4000/uploads/profile_icon.jpg">
+            </label>
+            <input type="file" name="selectedImage" id="file-upload" (input)="selectImage($event)"><br />
+            <label class="text-secondary" for="file-upload" *ngIf="!lekar.slika">-----Postavi
+                profilnu-----</label>
+            <label class="text-secondary" for="file-upload" *ngIf="lekar.slika != ''">-----Promeni
+                profilnu-----</label><br /><br />
+            <div class="col-md-5">
+                <table class="table table-info table-bordered">
+                    <tbody>
+                        <tr>
+                            <td>Ime:</td>
+                            <td>{{lekar.ime}}</td>
+                            <td><input type="checkbox" class="form-check-inline"></td>
+                        </tr>
+                        <tr>
+                            <td>Prezime:</td>
+                            <td>{{lekar.prezime}}</td>
+                            <td><input type="checkbox" class="form-check-inline"></td>
+                        </tr>
+                        <tr>
+                            <td>E-mail:</td>
+                            <td>{{lekar.mejl}}</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Adresa:</td>
+                            <td>{{lekar.adresa}}</td>
+                            <td><input type="checkbox" class="form-check-inline"></td>
+                        </tr>
+                        <tr>
+                            <td>Kontakt telefon:</td>
+                            <td>{{lekar.kontakt}}</td>
+                            <td><input type="checkbox" class="form-check-inline"></td>
+                        </tr>
+                        <tr>
+                            <td>Broj licence:</td>
+                            <td>{{lekar.licenca}}</td>
+                            <td><input type="checkbox" class="form-check-inline"></td>
+                        </tr>
+                        <tr>
+                            <td>Specijalizacija:</td>
+                            <td>{{lekar.specijalizacija}}</td>
+                            <td><input type="checkbox" class="form-check-inline"></td>
+                        </tr>
+                        <tr>
+                            <td>Ogranak:</td>
+                            <td>{{lekar.ogranak}}</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <button class="btn btn-light">Ažuriraj profil</button><br /><br />
+            <label class="form-check-label text-secondary">Promeni lozinku? </label>
+            <input type="checkbox" [(ngModel)]="changePass" class="form-check-inline" /><br />
+            <div *ngIf="changePass">
+                <label for="oldpassword" class="form-label">Stara lozinka</label><br />
+                <input type="password" id="oldpassword" [(ngModel)]="password" class="form-control-lg"><br />
+                <label for="newpassword" class="form-label">Nova lozinka</label><br />
+                <input type="password" id="newpassword" [(ngModel)]="newpassword" class="form-control-lg"><br />
+                <label for="passwordagain" class="form-label">Ponovite novu lozinku</label><br />
+                <input type="password" id="passwordagain" [(ngModel)]="passwordagain"
+                    class="form-control-lg"><br /><br />
+                <button class="btn btn-light" (click)="changePassword()">Promeni lozinku</button><br /><br />
+                <pre class="text-danger">{{error}}</pre>
+            </div><br /><br/>
+            <h5>Pregledi za Vašu specijalizaciju</h5><br/>
+            <div class="col-md-5">
+                <table class="table table-info table-bordered text-center">
+                    <thead>
+                        <tr>
+                            <th>Naziv</th>
+                            <th>Trajanje</th>
+                            <th>Cena</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let sp of spregledi">
+                            <td>{{sp.naziv}}</td>
+                            <td>{{sp.trajanje}}min</td>
+                            <td>{{sp.cena}}din</td>
+                            <td><button class="btn btn-light" (click)="dodajPregled(sp.naziv,sp.trajanje,sp.cena)">Dodaj
+                                    pregled</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div><br />
+        </div>
+        <div *ngIf="pregled">
+            <h3>Naredna tri pregled</h3><br/>
+            <div class="col-md-10">
+                <table class="table table-info table-bordered text-center">
+                    <thead>
+                        <tr>
+                            <th>Pregled</th>
+                            <th>Datum</th>
+                            <th>Vreme</th>
+                            <th>Pacijent</th>
+                            <th>Obrazloženje</th>  
+                            <th></th>     
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let z of prvihTri">
+                            <td>{{z.naziv}}</td>
+                            <td>{{z.datum | date : "yyyy-MM-dd"}}</td>
+                            <td>{{z.vreme}}</td>
+                            <td (click)="idiNaKarton(z.pacijent)">{{z.imeIprezimeP}}</td>
+                            <td><input type="text" [(ngModel)] ="z.obrazlozenje" ></td>
+                            <td><button class="btn btn-light" (click)="otkazi(z.idZ, z.obrazlozenje)">Otkaži pregled</button></td>
+                        </tr>
+                    </tbody>
+                </table>    
+            </div><br /><br/>
+            <pre class="text-danger">{{errorP}}</pre>
+        </div>
+    </div>
+    <footer class="bg-info">
+        <h5 class="text-center">2023@ Lekarska ordinacija</h5>
+    </footer><br />
+</body>

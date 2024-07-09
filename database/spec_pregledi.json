@@ -1,0 +1,18 @@
+[{
+  "_id": {
+    "$oid": "650996d4bbf8ccfdba71566e"
+  },
+  "naziv": "videopolisomnografija",
+  "specijalizacija": "neurologija",
+  "trajanje": 100,
+  "cena": 56000
+},
+{
+  "_id": {
+    "$oid": "650996d4bbf8ccfdba71566f"
+  },
+  "naziv": "vizuelni evocirani potencijal",
+  "specijalizacija": "neurologija",
+  "trajanje": 100,
+  "cena": 15000
+}]

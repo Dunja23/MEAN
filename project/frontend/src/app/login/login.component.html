@@ -1,0 +1,25 @@
+<body class="bg-opacity-50 bg-info">
+    <div class="container-fluid">
+        <head class="row bg-info text-center">
+            <h2>Prijava</h2>
+        </head>
+        <div class="row">
+            <div class="col-md-12 text-end">
+                <button class="btn btn-outline-dark" (click)="nazad()">Nazad na početnu</button>
+            </div>
+        </div><hr/><br/>
+        <label for="username" class="form-label"> Korisničko ime </label><br />
+        <input type="text" id="username" [(ngModel)]="username" class="form-control-lg" /> <br />
+        <label for="password" class="form-label"> Lozinka </label><br />
+        <input type="password" id="password" [(ngModel)]="password" class="form-control-lg" /> <br>
+        <label for="checkbox" class="form-check-label">Da li ste lekar?</label>
+        <input type="checkbox" id="checkbox" [(ngModel)]="lekar" class="form-check-inline" /><br /><br />
+        <button class="btn btn-light" (click)="login()">Uloguj se</button>
+        <br /><br /><br /><br /><br /><br /><br /><br /><br />
+        Klinki ovde za <a routerLink="/register" class="alert-link">registraciju.</a><br />
+        <p class="text-danger">{{error}}</p>
+    </div>
+    <footer class="bg-info">
+        <h5 class="text-center">2023 Lekarska ordinacija</h5>
+    </footer><br />
+</body>

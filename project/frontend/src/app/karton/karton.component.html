@@ -1,0 +1,110 @@
+<body class="bg-opacity-50 bg-info">
+    <div class="container-fluid">
+        <head class="row bg-info text-center">
+            <h2>Lekar</h2>
+        </head>
+        <div class="row">
+            <div class="col-md-12 text-end">
+                <button class="btn btn-outline-dark" (click)="nazadNaProfil()">Nazad na profil</button>
+            </div>
+        </div>
+        <hr /><br />
+        <h3>Karton pacijenta</h3><br />
+        <label for="file-upload">
+            <img *ngIf="pacijent.slika !='' " src="http://localhost:4000/uploads/{{pacijent.slika}}" width="200"
+                height="200">
+            <img *ngIf="!pacijent.slika" src="http://localhost:4000/uploads/profile_icon.jpg">
+        </label><br /><br />
+        <div class="col-md-5">
+            <table class="table table-info table-bordered">
+                <tbody>
+                    <tr>
+                        <td>Ime:</td>
+                        <td>{{pacijent.ime}}</td>
+                    </tr>
+                    <tr>
+                        <td>Prezime:</td>
+                        <td>{{pacijent.prezime}}</td>
+                    </tr>
+                    <tr>
+                        <td>E-mail:</td>
+                        <td>{{pacijent.mejl}}</td>
+                    </tr>
+                    <tr>
+                        <td>Adresa:</td>
+                        <td>{{pacijent.adresa}}</td>
+                    </tr>
+                    <tr>
+                        <td>Kontakt telefon:</td>
+                        <td>{{pacijent.kontakt}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div><br />
+        <h3>Izvestaji pacijenta</h3><br />
+        <div class="col-md-10">
+            <table class="table table-info table-bordered text-center">
+                <thead>
+                    <tr>
+                        <th>Datum</th>
+                        <th>Vreme</th>
+                        <th>Lekar</th>
+                        <th>Razlog</th>
+                        <th>Dijagnoza</th>
+                        <th>Terapija</th>
+                        <th>Preporucen datum kontrole</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let i of izvestaji">
+                        <td>{{i.datum | date: "yyyy-MM-dd"}}</td>
+                        <td>{{i.vreme}}</td>
+                        <td>{{i.imeIprezimeL}}</td>
+                        <td>{{i.razlog}}</td>
+                        <td>{{i.dijagnoza}}</td>
+                        <td>{{i.terapija}}</td>
+                        <td>{{i.prep_datum | date: "yyyy-MM-dd"}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div><br /><br />
+        <h5>Napiši izvestaj</h5><br />
+        <div class="col-md-5">
+            <table class="table table-info table-bordered text-center">
+                <thead>
+                    <tr>
+                        <th>Datum</th>
+                        <th>Vreme</th>
+                        <th>Naziv</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let z of zakazani">
+                        <td>{{z.datum | date: "yyyy-MM-dd"}}</td>
+                        <td>{{z.vreme}}</td>
+                        <td>{{z.naziv}}</td>
+                        <td><button class="btn btn-light" (click)="izvestajI(z.idZ, z.naziv)">Izveštaj</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div><br /><br />
+        <div *ngIf="izvestaj"class="form-group">
+            <h5>Izvestaj za pregled - {{naziv}}</h5>
+            <label for="razlog">Razlog:</label>
+            <input type="text" id="razlog" [(ngModel)]="razlog"><br />
+            <label for="dijagnoza">Dijagnoza:</label>
+            <input type="text" id="dijagnoza"  [(ngModel)]="dijagnoza"><br />
+            <label for="terapija">Terapija:</label>
+            <input type="text" id="terapija"  [(ngModel)]="terapija"><br />
+            <label for="datum">Datum izvestaja:</label>
+            <input type="datetime-local" id="datum"><br />
+            <label for="datum1">Datum preporuke kontrole:</label>
+            <input type="date" id="datum1"><br /><br/><br/>
+            <button class="btn btn-light" (click)="napisiIzvestaj()">Zakaži</button>
+        </div><br/>
+    </div>
+    <footer class="bg-info">
+        <h5 class="text-center">2023@ Lekarska ordinacija</h5>
+    </footer><br />
+</body>

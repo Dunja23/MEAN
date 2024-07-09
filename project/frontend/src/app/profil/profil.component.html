@@ -1,0 +1,82 @@
+<body class="bg-opacity-50 bg-info">
+    <div class="container-fluid">
+        <head class="row bg-info text-center">
+            <h2>Pacijent</h2>
+        </head>
+        <div class="row">
+            <div class="col-md-12 text-end">
+                <button class="btn btn-outline-dark" (click)="nazadNaProfil()">Nazad na profil</button>
+            </div>
+        </div>
+        <hr /><br />
+        <h3>Profil lekara</h3><br/>
+        <label for="file-upload">
+            <img *ngIf="lekar.slika !='' " src="http://localhost:4000/uploads/{{lekar.slika}}" width="200" height="200">
+            <img *ngIf="!lekar.slika" src="http://localhost:4000/uploads/profile_icon.jpg">
+        </label><br /><br />
+        <div class="col-md-5">
+            <table class="table table-info table-bordered">
+                <tbody>
+                    <tr>
+                        <td>Ime:</td>
+                        <td>{{lekar.ime}}</td>
+                    </tr>
+                    <tr>
+                        <td>Prezime:</td>
+                        <td>{{lekar.prezime}}</td>
+                    </tr>
+                    <tr>
+                        <td>E-mail:</td>
+                        <td>{{lekar.mejl}}</td>
+                    </tr>
+                    <tr>
+                        <td>Specijalizacija:</td>
+                        <td>{{lekar.specijalizacija}}</td>
+                    </tr>
+                    <tr>
+                        <td>Ogranak:</td>
+                        <td>{{lekar.ogranak}}</td>
+                    </tr>
+                    <tr>
+                        <td>Kontakt telefon:</td>
+                        <td>{{lekar.kontakt}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div><br />
+        <h3>Pregledi</h3>
+        <div class="col-md-7">
+            <table class="table table-info table-bordered text-center">
+                <thead>
+                    <tr>
+                        <th>Naziv</th>
+                        <th>Trajanje</th>
+                        <th>Cena</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let p of pregledi">
+                        <td>{{p.naziv}}</td>
+                        <td>{{p.trajanje}}min</td>
+                        <td>{{p.cena}}din</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div><br /><br />
+        <h3>Zakaži pregled</h3>
+        <div class="form-group">
+            <label for="list">Izaberite pregled: </label>
+            <select class="form-constrol" id="list" [(ngModel)]="zakazan">
+                <option *ngFor="let p of pregledi" [value]="p.naziv">{{p.naziv}}</option>
+            </select><br/>
+            <label for="datum">Datum pregleda:</label>
+            <input type="datetime-local" id="datum"><br/>
+            <button class="btn btn-light" (click)="zakaziPregled()">Zakaži</button>
+        </div><br/>
+        <pre class="text-danger">{{error}}</pre>
+        <pre class="text-success">{{success}}</pre> <br />
+    </div>
+    <footer class="bg-info">
+        <h5 class="text-center">2023@ Lekarska ordinacija</h5>
+    </footer><br />
+</body>

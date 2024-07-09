@@ -1,0 +1,28 @@
+[{
+  "_id": {
+    "$oid": "650476fbaddb6530bc25d5bb"
+  },
+  "ime": "Ognjen",
+  "prezime": "Ognjenovic",
+  "kor_ime": "ogi",
+  "lozinka": "Ogi123!",
+  "mejl": "ogi@gmail.com",
+  "adresa": "Patrijarha Joanikija 42",
+  "kontakt": "0611125366",
+  "slika": "",
+  "odbijena": false
+},
+{
+  "_id": {
+    "$oid": "650a8e44979da0f18f989eef"
+  },
+  "kor_ime": "saki",
+  "slika": "",
+  "ime": "Sara",
+  "prezime": "Saric",
+  "lozinka": "Saki123!",
+  "mejl": "sara@gmail.com",
+  "adresa": "Lješka 50",
+  "kontakt": "0614588890",
+  "odbijena": false
+}]

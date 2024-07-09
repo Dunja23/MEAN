@@ -1,0 +1,91 @@
+[{
+  "_id": {
+    "$oid": "650877bd8a6b953ee8b3e692"
+  },
+  "idZ": 1,
+  "lekar": "danica",
+  "pacijent": "pera",
+  "naziv": "pregled specijaliste infektologa",
+  "datum": {
+    "$date": "2023-05-20T12:00:00.000Z"
+  },
+  "izvestaj": true
+},
+{
+  "_id": {
+    "$oid": "650878888a6b953ee8b3e693"
+  },
+  "idZ": 2,
+  "lekar": "ana",
+  "pacijent": "pera",
+  "naziv": "elektroencelografija",
+  "datum": {
+    "$date": "2023-05-20T10:00:00.000Z"
+  },
+  "izvestaj": false
+},
+{
+  "_id": {
+    "$oid": "650885e4fda715334f59edf8"
+  },
+  "idZ": 3,
+  "lekar": "gora",
+  "pacijent": "pera",
+  "naziv": "vadjenje umnjaka",
+  "datum": {
+    "$date": "2023-09-18T20:00:00.000Z"
+  },
+  "izvestaj": true
+},
+{
+  "_id": {
+    "$oid": "6508c2cdd7971da68ca94f6b"
+  },
+  "idZ": 4,
+  "lekar": "ana",
+  "pacijent": "zika",
+  "naziv": "elektroencelografija",
+  "datum": {
+    "$date": "2023-05-20T17:00:00.000Z"
+  },
+  "izvestaj": false
+},
+{
+  "_id": {
+    "$oid": "6508c310d7971da68ca94f77"
+  },
+  "idZ": 5,
+  "lekar": "mika",
+  "pacijent": "zika",
+  "naziv": "OAE",
+  "datum": {
+    "$date": "2023-09-19T13:00:00.000Z"
+  },
+  "izvestaj": false
+},
+{
+  "_id": {
+    "$oid": "65099b4023dfc083ceb10d4b"
+  },
+  "idZ": 6,
+  "lekar": "danica",
+  "pacijent": "zika",
+  "naziv": "pregled specijaliste infektologa",
+  "datum": {
+    "$date": "2023-05-20T14:30:00.000Z"
+  },
+  "izvestaj": true
+},
+{
+  "_id": {
+    "$oid": "65099b7423dfc083ceb10d62"
+  },
+  "idZ": 7,
+  "lekar": "danica",
+  "pacijent": "pera",
+  "naziv": "lumbalna punkcija",
+  "datum": {
+    "$date": "2023-05-19T15:00:00.000Z"
+  },
+  "izvestaj": true
+}]
